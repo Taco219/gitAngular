@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+
+</head>
+<body ng-app="myApp">
+    <div  ng-controller="myCtrl">
+        {{ firstName +" "+ lastName }}
+    </div>
+
+    <div ng-init="firstName='John'">
+        <p>Name: <input type="text" ng-model="firstName"></p>
+        <p>You wrote: {{ firstName }}</p>
+    </div>
+
+    <div ng-init="firstName='John'">
+        <my-Directive></my-Directive>
+    </div>
+    <div ng-controller="ctrUrl">
+        {{ myUrl }}
+    </div>
+
+    <div ng-controller="ctrTimeOut">
+        {{ myHeader }}
+    </div>
+
+    <div ng-controller="ctrInterval">
+        {{theTime | date : 'dd-mm-yyyy'}}
+    </div>
+
+
+
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/controllers/myController.js"></script>
+    <script src="js/Directives/myDirective.js"></script>
+</body>
+</html>
